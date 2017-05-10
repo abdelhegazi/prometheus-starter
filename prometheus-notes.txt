@@ -1,0 +1,48 @@
+
+
+Currently prometheus does not do:
+----------------------------------
+>> raw log/event collection:
+only dies aggregated time-series data if needed everything so a logging system is needed so no sort of every-user request or requests IDs ...etc
+
+
+>> request tracking:
+recommend zipkin for that 
+
+>> "magic" anomaly detection:
+No data analysis just a very explict querty
+
+
+>> automatic horizontal scaling:
+
+>> durable long-term storage:
+its decoiupled but not yet fully integrated
+
+>> user/auth management:
+not integrated into prometheus 
+
+
+- PromQL is great
+
+
+Pull vs Push
+-------------
+- Exporters exist for each service that means it need to start separately for each service intended to be monitored including the physical nodes and later
+  prometheus server will pull from these exporters.
+
+- currently they favor this model instead of having one big exporeter for all running servcies, as it gets operational bottleneck, no isolation and would
+  be forced to collect all data not selectively.
+
+So they ended up installing one exporter per each service mysql, linux node, ...etc
+
+
+>> Their HA model is different, as current prometheus isn't clustered, but it allows running two or more servers at once pull the same data while not 
+   talking to each other as sort of replcating the most recent data with no cluster configurations or services running.
+
+>> 
+
+ 
+
+
+
+
