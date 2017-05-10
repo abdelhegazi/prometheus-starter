@@ -7,6 +7,5 @@ This isn't using any monitoring dashboards like grafana, you would just need to 
 
 
 ```
-$ ./promethus -config.gile promethus-helloworld.yml
-
+$ ./promethus -config.file promethus-helloworld.yml
 ```
