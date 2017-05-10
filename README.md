@@ -1,4 +1,5 @@
 # prometheus-starter
+## Using prometheus 1.6
 
 This is just a hello-world promethus repo where you just need to run the node exporter to get receive some data.
 
