@@ -22,7 +22,16 @@ its decoiupled but not yet fully integrated
 not integrated into prometheus 
 
 
-- PromQL is great
+>> PromQL is great:
+--------------------
+- Prometheus 1.6 includes a new experimental feature called remote read.
+- As long term storage is one of the most requested features of Prometheus. The remote write path
+  allows streaming data out of Prometheus, and the new remote read allows pulling that data back
+  in PromQL queries. https://www.robustperception.io/promql-queries-against-sql-databases-using-a-read-adapter/
+- While long term storage is its primary intended use, the APIs don’t restrict it to that.
+  You could use it to transparently access data from an older monitoring system that Prometheus
+  has replaced, or even a SQL database. Such uses should be very limited on both reliability and
+  sanity grounds, but let’s run small example to give a taste of what’s possible. 
 
 
 Pull vs Push
@@ -39,7 +48,6 @@ So they ended up installing one exporter per each service mysql, linux node, ...
 >> Their HA model is different, as current prometheus isn't clustered, but it allows running two or more servers at once pull the same data while not 
    talking to each other as sort of replcating the most recent data with no cluster configurations or services running.
 
->> 
 
  
 
