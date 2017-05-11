@@ -18,30 +18,28 @@ This is a cool starter video to start with: https://www.youtube.com/watch?v=h0Od
 
 
 
-Currently prometheus does not do:
-----------------------------------
->> raw log/event collection:
+## Currently prometheus does not do:
+- raw log/event collection:
 only dies aggregated time-series data if needed everything so a logging system is needed so no sort of every-user request or requests IDs ...etc
 
 
->> request tracking:
+- request tracking:
 recommend zipkin for that 
 
->> "magic" anomaly detection:
+- "magic" anomaly detection:
 No data analysis just a very explict querty
 
 
->> automatic horizontal scaling:
+- automatic horizontal scaling:
 
->> durable long-term storage:
+- durable long-term storage:
 its decoiupled but not yet fully integrated
 
->> user/auth management:
+- user/auth management:
 not integrated into prometheus 
 
 
->> PromQL is great:
---------------------
+## PromQL is great:
 - Prometheus 1.6 includes a new experimental feature called remote read.
 - As long term storage is one of the most requested features of Prometheus. The remote write path
   allows streaming data out of Prometheus, and the new remote read allows pulling that data back
@@ -52,8 +50,7 @@ not integrated into prometheus
   sanity grounds, but let’s run small example to give a taste of what’s possible. 
 
 
-Pull vs Push
--------------
+## Pull vs Push
 - Exporters exist for each service that means it need to start separately for each service intended to be monitored including the physical nodes and later
   prometheus server will pull from these exporters.
 
