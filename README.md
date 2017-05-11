@@ -60,7 +60,7 @@ not integrated into prometheus
 So they ended up installing one exporter per each service mysql, linux node, ...etc
 
 
->> Their HA model is different, as current prometheus isn't clustered, but it allows running two or more servers at once pull the same data while not 
+>> Prometheus HA model is different, as current prometheus isn't clustered, but it allows running two or more servers at once pull the same data while not 
    talking to each other as sort of replcating the most recent data with no cluster configurations or services running.
 
 
