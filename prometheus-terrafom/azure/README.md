@@ -8,8 +8,8 @@ Current
 ---------------------------------------------------------
 [public subnet ]                      | [private subnet]
 ---------------------------------------------------------
-- prometheus server(s)                |
-- application servers                 |
+- prometheus server(s)    |
+                          | - application servers                 
 ---------------------------------------------------------
 
 
