@@ -1,0 +1,6 @@
+# will be deployed once the bastion box is created where grafana would be deployed.
+# the box would be attached to a load balancer that is connected to all prometheus servers within the private subnet
+
+
+# This shall guarantee grafana dashboard will always receive input from the loadbalancer (hopefully)
+

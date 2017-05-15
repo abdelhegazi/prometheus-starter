@@ -1,6 +1,6 @@
 variable "azure_resource_group_name" {
     description = "Resource Group Name"
-    default = "rmgmond_RG"
+    default = "rmgmondRG"
 }
 
 variable "vm_name_prefix" { 
@@ -8,9 +8,14 @@ variable "vm_name_prefix" {
     default = "rmgmond_VM"
 }
 
-variable "vm_count" {
-    description = "Number of VMs to create"
-    default = "2"
+variable "app_vm_count" {
+    description = "Number of application VMs to create"
+    default = "1"
+}
+
+variable "mon_vm_count" {
+    description = "Number of Prometheus server VMs to create"
+    default = "1"
 }
 
 variable "vm_size" { 
@@ -33,12 +38,10 @@ variable "username" {
     default = "rmg-user"
 }
 
-# TODO: create a resource that generates random password for each servers
-variable "admin_password" {
-    description = "Password for the Administrator account"
-    default = "Ops#!rMg123"
+variable "domain_name_label" {
+    description = "domain name label for the public IP"
+    default = "rmgmond-prom"
 }
-
 
 variable "environment_tag" {
     description = "Tag to apply to the resoucrces"
